@@ -1,7 +1,7 @@
 ## Weekly Programming Challenge #10
 
 Jamis Buck publishes programming challenges on his blog at 
-https://medium.com/@jamis/. This is my submission for week 10. This time it's
+http://jamis.jamisbuck.org/2016/10/1/weekly-programming-challenge-10.html. This is my submission for week 10. This time it's
 all about socket programming. I solved Normal Mode, which is a simple protocol for sending a request/response between a client and a server. The message sent is simply reversed to start with.
 
 ## Build, run and test
