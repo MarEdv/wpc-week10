@@ -1,0 +1,54 @@
+name:                wpc-week10
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/maredv/wpc-week10#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Marcus Edvinsson
+maintainer:          edvinsson@gmail.com
+copyright:           2016 Marcus Edvinsson
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , binary
+                     , network
+  default-language:    Haskell2010
+
+executable server
+  hs-source-dirs:      server
+  main-is:             Server.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , network
+                     , wpc-week10
+  default-language:    Haskell2010
+
+executable client
+  hs-source-dirs:      client
+  main-is:             Client.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N 
+  build-depends:       base
+                     , network
+                     , wpc-week10
+  default-language:    Haskell2010
+
+test-suite wpc-week10-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , wpc-week10
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N 
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/maredv/wpc-week10
