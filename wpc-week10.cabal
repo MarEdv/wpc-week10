@@ -19,6 +19,7 @@ library
   build-depends:       base >= 4.7 && < 5
                      , bytestring
                      , binary
+                     , split
                      , network
   default-language:    Haskell2010
 
@@ -34,6 +35,15 @@ executable server
 executable client
   hs-source-dirs:      client
   main-is:             Client.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N 
+  build-depends:       base
+                     , network
+                     , wpc-week10
+  default-language:    Haskell2010
+
+executable http-client
+  hs-source-dirs:      http-client
+  main-is:             HttpClient.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N 
   build-depends:       base
                      , network
